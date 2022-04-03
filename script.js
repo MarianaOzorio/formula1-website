@@ -455,10 +455,19 @@ function showChampion() {
         var selectedValue = selectedYear.options[selectedYear.selectedIndex].value;
         var championTxt = document.querySelector('.champion-txt');
 
-        if(selectedValue == driver.year){ 
-            document.querySelector('.champion-photo').setAttribute('src', driver.photoURL);            
-            championTxt.innerHTML = `The champion in ${selectedValue} was ${driver.name} for ${driver.team}.`; 
-            return;            
+        parseInt(driver.year);
+
+        if(isNaN(selectedValue)){
+            window.alert('ERROR! Please select an year'); 
+            return;         
+        } else {
+            if(selectedValue == driver.year){
+                document.querySelector('.research-container').style.top = "33%";
+                document.querySelector('.champion-img-container').style.visibility = "visible";
+
+                document.querySelector('.champion-photo').setAttribute('src', driver.photoURL);            
+                championTxt.innerHTML = `The champion in ${selectedValue} was ${driver.name} for ${driver.team}.`;
+            }                    
         }
     }  
 }
