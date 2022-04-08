@@ -44,15 +44,22 @@ main {
 
 /* INDEX */
 
+.index-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
 .index-txt {
     width: 45%;
     display: table;
-    float: left;
     font-size: 1em;
-    margin: 0;
-    position: absolute;               
-    top: 50%;                  
-    transform: translate(0, -30%);
+    margin: 0;       
+    top: 50%;  
+    transform: translate(0, 10%);                
+    /*transform: translate(0, -30%);*/
 }
 
 .index-txt h1 {
@@ -62,18 +69,17 @@ main {
 .btn-read-more {
     width: 80px;
     height: 25px; 
-    font-size: 10px;
+    font-size: 0.6em;
 }
 
 .img-index-container {
     width: 45%;
-    float: right;
 }
 
 .img-index-container img {
     width: 100%;
     height: 100vh;
-}   
+}
 
 /* CHAMPIONS */
 
@@ -99,6 +105,7 @@ main {
 
 .search-container {
     height: 23px;
+    
 }
 
 select {
@@ -106,12 +113,13 @@ select {
     height: 100%;
     border: none;
     border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
 .btn-search {
     width: 13%;
-    height: 100%;
+    height: 100%; 
 }
 
 .champion-img-container{
@@ -138,16 +146,14 @@ select {
 /* TEAMS */
 
 .instruction-title {
-    font-size: 25px;
-    margin-bottom: 40px;
+    font-size: 1.6em;
+    margin-bottom: 19px;
     text-align: center;
     color: white;
 }
 
 .teams-container {
     width: 100%;
-    /*display: table;
-    position: absolute;*/
     text-align: center;
 }
 
@@ -172,7 +178,7 @@ select {
 
 .flip-card-title {
     color: white;
-    font-size: 17px;
+    font-size: 1em;
     margin-top: 15px;
 }
 
@@ -208,7 +214,7 @@ select {
 
 .back-flip p {
     color: black;
-    font-size: 12px;
+    font-size: 0.7em;
     line-height: 5px;
     margin-top: 16.5px;
 }
@@ -219,57 +225,33 @@ select {
     width: 89%;
     margin: auto;
     overflow-y: visible;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     font-size: 1em;
 }
 
-.img-left-txt-right-container {
+.img-left-txt-right-container, .img-right-txt-left-container {
     width: 100%;
     height: 250px;
-    position: relative;
-}
-
-.img-left-txt-right-container img {
-    width: 30%;
-    height: 250px;
-    float: left;    
-    box-shadow: -5px -5px 5px rgba(92, 92, 92, 0.1),
-    10px 10px 10px rgba(0, 0, 0, 0.4); 
-}
-
-.img-left-txt-right-container p {
-    width: 65%;
-    float: right;
-    margin: 0;
-    position: absolute;               
-    top: 50%;   
-    left: 35%;                     
-    transform: translate(0, -50%);  
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .img-right-txt-left-container {
-    width: 100%;
-    height: 250px;
-    position: relative;
     margin: 60px 0px;
 }
 
-.img-right-txt-left-container img {
+.img-left-txt-right-container img, .img-right-txt-left-container img {
     width: 30%;
-    height: 250px;
-    float: right;
+    height: 250px; 
     box-shadow: -5px -5px 5px rgba(92, 92, 92, 0.1),
     10px 10px 10px rgba(0, 0, 0, 0.4); 
 }
 
-.img-right-txt-left-container p {
-    width: 65%;
-    float: left;
-    margin: 0;
-    position: absolute;               
-    top: 50%;                        
-    transform: translate(0, -50%); 
-}    
+.img-left-txt-right-container p, .img-right-txt-left-container p {
+    width: 65%; 
+}
 
 /* CLASSES UTILITÁRIAS */
 
@@ -292,7 +274,7 @@ select {
     border: none;
     border-radius: 4px;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 50%;
+    /*line-height: 50%;*/
 }
 
 .btn-bg-red:hover {
