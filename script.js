@@ -447,9 +447,6 @@ f1Champions = {
 
 function showChampion() {
 
-    document.querySelector('.research-container').style.top = "33%";
-    document.querySelector('.champion-img-container').style.visibility = "visible";
-
     for(var i = 0; f1Champions.champion.length > i; i++){
         var driver = f1Champions.champion[i];
         var selectedValue = selectedYear.options[selectedYear.selectedIndex].value;
